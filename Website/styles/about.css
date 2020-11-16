@@ -1,0 +1,38 @@
+/* Start Global Styles */
+@import url(../styles/main.css);
+
+
+
+
+
+
+
+/* End Global Styles */
+
+
+/* Start Navbar */
+.header{
+    background-color: var(--white);
+    color: var(--black);
+    position: fixed;
+    border-bottom: 1px solid var(--gray);
+    
+}
+
+.hamburger-menu{
+    color: var(--black);
+}
+.nav-item,
+.nav-list
+{
+    color: var(--black);
+}
+/* End Navbar */
+/* Start Hero Section */
+.hero img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* End Hero Section */
