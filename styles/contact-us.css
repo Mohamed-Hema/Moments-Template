@@ -1,0 +1,224 @@
+@import url(../styles/main.css);
+/* Start Global Style */
+
+/* End Global Style */
+/* Start Hero Section */
+.hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video{
+    position: absolute;
+    width: 100%;
+    height: 53rem;
+    z-index: 1;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+.hero h1{
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    color: var(--white);
+    z-index: 3;
+}
+@media (max-width: 775px) {
+    .hero h1{
+        top: 45%;
+    }
+}
+@media (max-width: 400px) {
+    .hero h1{
+        font-size: 2rem;
+    }
+}
+
+
+.icon-scroll{
+    z-index: 3;
+}
+/* End Hero Section */
+/* Start Contact Section */
+.contact{
+    position: relative;
+    height: 80vh;
+    background: url(../images/contact-us-background.png) no-repeat;
+    background-size: cover;
+}
+.contact input,
+.contact textarea{
+    background-color: var(--light-blue);
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    padding: .8rem;
+    outline: var(--light-blue);
+
+
+}
+.contact input:focus,
+.contact textarea:focus{
+    border-color: var(--dark-blue);
+    transition: all .5s ease-in;
+}
+.contact input::placeholder,
+.contact textarea::placeholder{
+    color: var(--black);
+}
+.contact .username .fas,
+.contact .email .fas,
+.contact .message .fas{
+    position: absolute;
+    font-size: 1.5rem;
+}
+
+.contact .username .fas{
+    top: 8%;
+    left: -3%;
+}
+.contact .email .fas{
+    top: 25%;
+    left: -3%;
+}
+.contact .message .fas{
+    top: 42%;
+    left: -3%;
+}
+
+
+.right i{
+    font-size: 6rem;
+    display: block;
+    color: #3F3D56;
+    margin-left: 70%;
+    margin-top: 3rem;
+}
+@media (max-width: 1200px){
+    .right i{
+        font-size: 5rem;
+        
+    }
+}
+@media (max-width: 775px){
+    .right i{
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+}
+@media (max-width: 580px){
+    .right i{
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+    .contact .username,
+    .contact .email,
+    .contact .message {
+        margin-left: 5%;
+    }
+    .contact .username .fas{
+        top: 8%;
+        left: 1%;
+    }
+
+    .contact .email .fas{
+        top: 25%;
+        left: 1%;
+    }
+    .contact .message .fas{
+        top: 42%;
+        left: 1%;
+    }
+    .contact .btn{
+        margin-left:5%;
+    }
+}
+@media (max-width: 400px){
+    .right i{
+        font-size: 3rem;
+    }
+}
+/* End Contact Section */
+/* Start Footer Section */
+.footer{
+    height: 3rem;
+    background-color: var(--secondary-dark-blue);
+    color: var(--white);
+}
+.footer i:hover,
+.footer a:hover{
+    color: var(--black);
+}
+.footer i{
+    margin-right: .2rem;
+}
+.footer-list{
+    list-style-type: none;    
+}
+.footer-list a{
+    text-decoration: none;
+
+}
+.footer-list li{
+    display: inline;
+    margin-left: 1rem;
+}
+.left{
+    justify-content: left;
+}
+.right{
+    justify-content: right;
+}
+.copyright h5{
+    margin-top: 1.3rem;
+    font-size: .8rem;
+}
+.copyright a{
+    text-decoration: none;
+}
+@media (max-width:1200px) {
+    .footer{
+        overflow: hidden;
+        height: 4rem;
+    }
+    .right{
+        font-size: .8rem;
+    }
+    .copyright{
+        font-size: .3rem;
+    }
+}
+@media (max-width:775px) {
+    .footer{
+        overflow: hidden;
+        height: 10rem;
+    }
+    .right{
+        font-size: 1rem;
+    }
+    .right li{
+        display: block;
+    }
+    .left i{
+        display: block;
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+    .copyright{
+        font-size: 1.2rem;
+
+        width: 6rem;
+        margin-top: 5%;
+    }
+    
+
+}
+/* End Footer Section */

@@ -1,6 +1,8 @@
 /* Start Global Styles */
 @import url(../styles/main.css);
-
+body{
+    background-color: var(--white);
+}
 
 
 
@@ -27,12 +29,128 @@
 {
     color: var(--black);
 }
+.nav-item:hover{
+    transition: all .2s;
+}
 /* End Navbar */
 /* Start Hero Section */
+.hero{
+    position: relative;
+    background-color: var(--white);
+    height: 100vh;
+}
 .hero img{
     width: 100%;
     height: auto;
 }
-
-
+.hero .lead{
+    margin-top:38%;
+}
+.hero .flag{
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+.hero .flag h1{
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 10%;
+    color: #fff;
+}
 /* End Hero Section */
+/* Start Joe Section */
+.joe{
+    height: 50vh;
+}
+.joe img{
+    border-radius: 3rem;
+    box-shadow: 0 0 20px #E3E4E6;
+}
+.joe h2{
+    margin-top: 15%;
+    margin-bottom: 5%;
+
+}
+
+
+
+/* End Joe Section */
+
+
+
+/* Start Footer Section */
+.footer{
+    height: 3rem;
+    background-color: var(--secondary-dark-blue);
+    color: var(--white);
+}
+.footer i:hover,
+.footer a:hover{
+    color: var(--black);
+}
+.footer i{
+    margin-right: .2rem;
+}
+.footer-list{
+    list-style-type: none;    
+}
+.footer-list a{
+    text-decoration: none;
+
+}
+.footer-list li{
+    display: inline;
+    margin-left: 1rem;
+}
+.left{
+    justify-content: left;
+}
+.right{
+    justify-content: right;
+}
+.copyright h5{
+    margin-top: 1.3rem;
+    font-size: .8rem;
+}
+.copyright a{
+    text-decoration: none;
+}
+@media (max-width:1200px) {
+    .footer{
+        overflow: hidden;
+        height: 4rem;
+    }
+    .right{
+        font-size: .8rem;
+    }
+    .copyright{
+        font-size: .3rem;
+    }
+}
+@media (max-width:775px) {
+    .footer{
+        overflow: hidden;
+        height: 10rem;
+    }
+    .right{
+        font-size: 1rem;
+    }
+    .right li{
+        display: block;
+    }
+    .left i{
+        display: block;
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+    .copyright{
+        font-size: 1.2rem;
+
+        width: 6rem;
+        margin-top: 5%;
+    }
+    
+
+}
+/* End Footer Section */

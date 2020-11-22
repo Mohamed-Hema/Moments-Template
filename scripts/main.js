@@ -15,11 +15,16 @@ menu.addEventListener('click', function() {
 // Start Carousel Section
 
 $(document).ready(function(){
-    
-    //invoke the carousel
-        $('#myCarousel').carousel({
-          interval:4000000
-        });
+    //Scroll to Top
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+
+
     
     // scroll slides on mouse scroll 
     $('#myCarousel').bind('mousewheel DOMMouseScroll', function(e){
