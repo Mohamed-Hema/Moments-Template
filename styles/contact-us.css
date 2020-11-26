@@ -1,6 +1,5 @@
-@import url(../styles/main.css);
 /* Start Global Style */
-
+@import url(../styles/main.css);
 /* End Global Style */
 /* Start Hero Section */
 .hero{
@@ -62,13 +61,28 @@
     margin-bottom: .5rem;
     padding: .8rem;
     outline: var(--light-blue);
-
+    border-color: transparent;
 
 }
 .contact input:focus,
 .contact textarea:focus{
-    border-color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
     transition: all .5s ease-in;
+}
+
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder{
+    color: var(--black);
+}
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder{
+    color: var(--black);
+}
+.contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder{
+    color: var(--black);
+}
+.contact input::-ms-input-placeholder, .contact textarea::-ms-input-placeholder{
+    color: var(--black);
 }
 .contact input::placeholder,
 .contact textarea::placeholder{
@@ -172,10 +186,14 @@
     margin-left: 1rem;
 }
 .left{
-    justify-content: left;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
 }
 .right{
-    justify-content: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
 }
 .copyright h5{
     margin-top: 1.3rem;

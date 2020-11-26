@@ -4,11 +4,6 @@ body{
     background-color: var(--white);
 }
 
-
-
-
-
-
 /* End Global Styles */
 
 
@@ -30,6 +25,8 @@ body{
     color: var(--black);
 }
 .nav-item:hover{
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
     transition: all .2s;
 }
 /* End Navbar */
@@ -58,6 +55,25 @@ body{
     left: 10%;
     color: #fff;
 }
+@media (max-width: 775px){
+    .hero{
+        margin-bottom: 4rem;
+    }
+    .hero .flag{
+        width: 15%;
+    }
+    .hero .flag h1{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 520px){
+    .hero .flag{
+        width: 18%;
+    }
+    .hero .flag h1{
+        font-size: .8rem;
+    }
+}
 /* End Hero Section */
 /* Start Joe Section */
 .joe{
@@ -65,19 +81,116 @@ body{
 }
 .joe img{
     border-radius: 3rem;
-    box-shadow: 0 0 20px #E3E4E6;
+    -webkit-box-shadow: 0 0 20px #E3E4E6;
+            box-shadow: 0 0 20px #E3E4E6;
 }
 .joe h2{
     margin-top: 15%;
     margin-bottom: 5%;
 
 }
-
-
-
+@media (max-width: 775px){
+    .joe{
+        margin-top: 15%;
+    }
+}
 /* End Joe Section */
 
+/* Start daniel Section */
+.daniel{
+    height: 100vh;
+    margin-bottom: 2rem;
 
+}
+.daniel img{
+    border-radius: 3rem;
+    -webkit-box-shadow: 0 0 20px #684D42;
+            box-shadow: 0 0 20px #684D42;
+}
+.daniel h2{
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+@media (max-width:775px) {
+    .daniel{
+        margin-top: 15%;
+
+        margin-bottom: -40%;
+    }
+    .daniel h2{
+        margin-top: 0;
+        margin-bottom: 15%;
+    }
+    
+}
+@media (max-width: 520px) {
+    .daniel{
+        margin-bottom: -20%;
+        margin-top: 15%;
+    }
+}
+@media (max-width: 375px) {
+    .daniel{
+        margin-bottom: 20%;
+    }
+}
+/* End daniel Section */
+
+/* Start John Section */
+.john{
+    height: 100vh;
+    margin-bottom: 2rem;
+}
+.john img{
+    border-radius: 3rem;
+    -webkit-box-shadow: 0 0 20px #B9BBB6;
+            box-shadow: 0 0 20px #B9BBB6;
+}
+.john h2{
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+@media (max-width:775px) {
+    .john{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    .john h2{
+        margin-top: 1%;
+    }
+    .john img{
+        margin-left: 25%;
+    }
+   
+}
+/* End John Section */
+
+/* Start Bye Section */
+.bye{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    height: 100vh;
+}
+.bye .btn{
+    margin-top: 2rem;
+    width: 100%;
+    height: 3.5rem;
+}
+.bye .h1{
+    text-transform: capitalize;
+}
+@media (max-width:775px) {
+    .bye{
+        margin-bottom: -5rem;
+    }
+    .bye .btn{
+        margin-top: 2rem;
+        width: 100%;
+        height: 3.5rem;
+    }
+}
+
+/* End Bye Section */
 
 /* Start Footer Section */
 .footer{
@@ -104,10 +217,14 @@ body{
     margin-left: 1rem;
 }
 .left{
-    justify-content: left;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
 }
 .right{
-    justify-content: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
 }
 .copyright h5{
     margin-top: 1.3rem;

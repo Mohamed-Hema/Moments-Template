@@ -4,7 +4,8 @@
 *,
 *::before,
 *::after{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 :root{
     --dark-blue: #012340;
@@ -24,6 +25,8 @@ body{
     font-family: var(--main-font);
 }
 *:hover{
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 .btn-blue{
@@ -65,8 +68,12 @@ ul{
     height: 4rem;
     background-color: rgba(0,0,0,0.0);
     color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top: 0;
     left: 0;
     position: absolute;
@@ -75,9 +82,15 @@ ul{
     background-color: var(--light-blue);
 }
 .nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .hamburger-menu{
     font-size: 1.5rem;
@@ -96,6 +109,8 @@ ul{
     display: none;
 }
 .nav-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: fixed;
     font-size: .5rem;
@@ -106,12 +121,23 @@ ul{
     width: 100%;
     height: 100vh;
     color: var(--white);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; 
     z-index: 1400;
     opacity: 0;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
 }
 .nav-item i:last-child{
@@ -122,11 +148,15 @@ ul{
     color: var(--secondary-dark-blue);
 }
 .social-media{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     cursor: pointer;
     font-size: 1.2rem;
 }
 .menu-open .nav-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: fixed;
     font-size: 1rem;
@@ -135,12 +165,23 @@ ul{
     width: 100%;
     height: 100vh;
     background-color: var(--light-blue);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     z-index: 1400;
     opacity: 0;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all .5s ;
+    -o-transition: all .5s ;
     transition: all .5s ;
 }
 
@@ -156,7 +197,9 @@ ul{
 
 .menu-open .nav-list {
     opacity: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 
 .menu-open .nav-link{
@@ -187,10 +230,17 @@ ul{
         width: initial;
         height: initial;
         background-color: transparent;
-        flex-direction: row;
-        justify-content: initial;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: initial;
+            -ms-flex-pack: initial;
+                justify-content: initial;
         opacity: 1;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
     }
     .nav-item:not(:last-child){
         margin-right: 3rem;
@@ -199,6 +249,8 @@ ul{
     .nav-link{
         font-size: 1.3rem;
         font-weight: normal;
+        -webkit-transition: color .5s;
+        -o-transition: color .5s;
         transition: color .5s;
     }
     .nav-link:hover{
@@ -212,9 +264,15 @@ ul{
     position: relative;
     height: 100vh;
     background-color: #292A2C;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
 }
 .hero img{
@@ -225,7 +283,8 @@ ul{
 .blink_me {
     position: absolute;
     top: 30%;
-    animation: blinker 3s linear infinite;
+    -webkit-animation: blinker 3s linear infinite;
+            animation: blinker 3s linear infinite;
     color:#fff;
 } 
   
@@ -234,13 +293,26 @@ ul{
     color:#fff;
     border-color: #fff;
 }
+@-webkit-keyframes blinker {
+    0% {
+        -webkit-transform:scale(1);
+                transform:scale(1);
+    }
+    5% { -webkit-transform:scale(1,0); transform:scale(1,0) }
+    10% {
+        -webkit-transform:scale(1);
+                transform:scale(1)
+    }
+}
 @keyframes blinker {
     0% {
-        transform:scale(1);
+        -webkit-transform:scale(1);
+                transform:scale(1);
     }
-    5% { transform:scale(1,0) }
+    5% { -webkit-transform:scale(1,0); transform:scale(1,0) }
     10% {
-        transform:scale(1)
+        -webkit-transform:scale(1);
+                transform:scale(1)
     }
 }
 .hero .btn{
@@ -262,7 +334,8 @@ ul{
     height: 70px;
     margin-left: -20px;
     margin-top: -35px;
-    box-shadow: inset 0 0 0 1px #fff;
+    -webkit-box-shadow: inset 0 0 0 1px #fff;
+            box-shadow: inset 0 0 0 1px #fff;
     border-radius: 25px;
 }
 .icon-scroll:before{
@@ -273,9 +346,22 @@ ul{
   margin-left: -4px;
   top: 8px;
   border-radius: 4px;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-name: scroll;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+}
+@-webkit-keyframes scroll{
+  0%{
+    opacity: 1;
+}
+  100%{
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px);
+  }
 }
 @keyframes scroll{
   0%{
@@ -283,7 +369,8 @@ ul{
 }
   100%{
     opacity: 0;
-    transform: translateY(46px);
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px);
   }
 }
 
@@ -393,9 +480,7 @@ ul{
     right:10px; 
     left:auto;
     -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
     transform: rotate(90deg);
 }
 @media (max-width: 1100px) {
@@ -422,7 +507,8 @@ ul{
 }
 .carousel-item img{
     border-radius: 2rem;
-    box-shadow: 0 0 1rem #000;
+    -webkit-box-shadow: 0 0 1rem #000;
+            box-shadow: 0 0 1rem #000;
 }
 .overlay{
     position: absolute;
@@ -456,8 +542,10 @@ ul{
     width: auto;
     height: 45rem;
     display: inline-block;
-    animation: backInRight;
-    animation-duration: 1s;
+    -webkit-animation: backInRight;
+            animation: backInRight;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 
 }
 
@@ -466,8 +554,10 @@ ul{
     color: var(--white);
     top: 10%;
     left: 5%;
-    animation: bounceInUp;
-    animation-duration: 2s;
+    -webkit-animation: bounceInUp;
+            animation: bounceInUp;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     
 }
 @media (max-width: 1100px){
@@ -536,8 +626,10 @@ ul{
     margin-top: 3.8rem;
     width: 70vw;
     height: 90vh;
-    animation: backInRight;
-    animation-duration: 1s;
+    -webkit-animation: backInRight;
+            animation: backInRight;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 }
 .carousel-item:nth-of-type(2) h1{
     position: absolute;
@@ -546,8 +638,10 @@ ul{
     margin-top: 3rem;
     color: #fff;
     text-align: center;
-    animation: bounceInUp;
-    animation-duration: 2s;
+    -webkit-animation: bounceInUp;
+            animation: bounceInUp;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 @media (max-width: 1300px){
     .carousel-item:nth-of-type(2) img{
@@ -633,8 +727,10 @@ ul{
     height: 95%;
     margin-left: 15rem;
     margin-top: 1rem;
-    animation: fadeInUp;
-    animation-duration: 1s;
+    -webkit-animation: fadeInUp;
+            animation: fadeInUp;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 }
 .carousel-item:nth-of-type(3) h1{
     position: absolute;
@@ -643,8 +739,10 @@ ul{
     color: #fff;
     margin: 2rem;
     text-align: center;
-    animation: fadeInDownBig;
-    animation-duration: 2s;
+    -webkit-animation: fadeInDownBig;
+            animation: fadeInDownBig;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 @media (max-width: 1300px){
     .carousel-item:nth-of-type(3) img{
@@ -729,15 +827,20 @@ ul{
     height: 90%;
     margin-left: 15rem;
     margin-top: 1rem;
-    animation: backInRight;
-    animation-duration: 1s;
+    -webkit-animation: backInRight;
+            animation: backInRight;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 }
 .carousel-item:nth-of-type(4) h1{
     color: #fff;
     text-align: center;
-    animation: heartBeat;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    -webkit-animation: heartBeat;
+            animation: heartBeat;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
 }
 
 /* Fifth Carousel */
@@ -754,13 +857,17 @@ ul{
    
 }
 .carousel-item:nth-of-type(5) img.first-img{
-    animation: fadeInLeft;
-    animation-duration: 1s;
+    -webkit-animation: fadeInLeft;
+            animation: fadeInLeft;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 }
 .carousel-item:nth-of-type(5) img.second-img{
     margin-left: 5%;
-    animation: fadeInRight;
-    animation-duration: 1s;
+    -webkit-animation: fadeInRight;
+            animation: fadeInRight;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 
 }
 .carousel-item:nth-of-type(5) h1:first-of-type
@@ -770,8 +877,10 @@ ul{
     top: 0;
     left: 40%;
     display: inline;
-    animation: fadeInDown;
-    animation-duration: 2s;
+    -webkit-animation: fadeInDown;
+            animation: fadeInDown;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 .carousel-item:nth-of-type(5) h1:last-of-type{
     color: #11538C;
@@ -779,8 +888,10 @@ ul{
     top: 0;
     left: 47%;
     display: inline;
-    animation: fadeInUp;
-    animation-duration: 2s;
+    -webkit-animation: fadeInUp;
+            animation: fadeInUp;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 
 }
 
@@ -799,13 +910,17 @@ ul{
    
 }
 .carousel-item:nth-of-type(6) img.first-img{
-    animation: fadeInDown;
-    animation-duration: 1s;
+    -webkit-animation: fadeInDown;
+            animation: fadeInDown;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 }
 .carousel-item:nth-of-type(6) img.second-img{
     margin-left: 5%;
-    animation: fadeInUp;
-    animation-duration: 1s;
+    -webkit-animation: fadeInUp;
+            animation: fadeInUp;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 
 }
 .carousel-item:nth-of-type(6) h1
@@ -815,8 +930,10 @@ ul{
     top: 0;
     left: 40%;
     display: inline;
-    animation: fadeInDown;
-    animation-duration: 2s;
+    -webkit-animation: fadeInDown;
+            animation: fadeInDown;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 
 
