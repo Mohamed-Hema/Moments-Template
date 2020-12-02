@@ -43,37 +43,14 @@ body{
 .hero .lead{
     margin-top:38%;
 }
-.hero .flag{
-    position: absolute;
-    top: 10%;
-    left: 0;
-}
-.hero .flag h1{
-    position: absolute;
-    z-index: 2;
-    top: 35%;
-    left: 10%;
-    color: #fff;
-}
+
 @media (max-width: 775px){
     .hero{
         margin-bottom: 4rem;
     }
-    .hero .flag{
-        width: 15%;
-    }
-    .hero .flag h1{
-        font-size: 1rem;
-    }
+  
 }
-@media (max-width: 520px){
-    .hero .flag{
-        width: 18%;
-    }
-    .hero .flag h1{
-        font-size: .8rem;
-    }
-}
+
 /* End Hero Section */
 /* Start Joe Section */
 .joe{

@@ -1,3 +1,10 @@
+//On Scroll Animation
+AOS.init({
+    duration: 1200,
+})
+
+
+// Global consts
 //Selectors
 const header = document.querySelector('.header');
 const menu = document.querySelector('.hamburger-menu');
@@ -13,7 +20,6 @@ let currentImageIdx = 0;
 menu.addEventListener('click', function() {
     header.classList.toggle('menu-open')
 });
-
 
 
 imageView.addEventListener('click', function(){
@@ -48,7 +54,7 @@ prevBtn.addEventListener('click', function(){
 
 nextBtn.addEventListener('click', function(){
     currentImageIdx++;
-    if(currentImageIdx === 52){
+    if(currentImageIdx === 51){
         currentImageIdx = 1;
     }
     currentImageDisplay(currentImageIdx);

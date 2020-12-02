@@ -8,8 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles/main.css">
     <title>Moments</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon-16x16.png">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="wrap-loader">
+        <div class="loader">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="wrap-text">
+                <div class="text"><span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span><span>...</span></div>
+            </div>
+        </div>
+        <div class="loader-text">Loading...</div>
+    </div>
+    <!-- Loading Screen -->
     <!-- Start NavBar -->
     <header class="header">
         <div class="container">
@@ -26,10 +41,10 @@
                         <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="/about.html" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Gallery</a>
+                        <a href="/gallery.html" class="nav-link">Gallery</a>
                     </li>
                     <div class="social-media">
                         <li class="nav-item">
@@ -45,7 +60,7 @@
                     </div>
 
                     <li class="nav-item">
-                        <a class="contact btn btn-blue">Contact Us</a>
+                        <a class="contact btn btn-blue" href="/contact-us.html">Contact Us</a>
                     </li>
                    
                 </ul>
@@ -66,7 +81,7 @@
     <!-- End Hero Section -->
     <!-- Start First Carousel Section -->
 <section class="first-carousel">
-  <div class="carousel">
+  <div class="carousel" id="myCarousel">
     <p>Our Work</p>
     <div class="carousel__body">
         <div class="carousel__prev"><i class="fas fa-angle-left"></i></div>
@@ -225,19 +240,19 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-caption">
-                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen. </p> <img src="https://i.imgur.com/lE89Aey.jpg">
+                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen. </p> 
                         <div id="image-caption">Nick Doe</div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-caption">
-                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
+                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> 
                         <div id="image-caption">Cromption Greves</div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-caption">
-                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
+                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> 
                         <div id="image-caption">Harry Mon</div>
                     </div>
                 </div>
@@ -249,6 +264,72 @@
 
     <!-- End Testimonials Section  -->
 
+    <!-- Start Thanks Section -->
+    <section class="thanks">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="h1 logo-font">Thanks For Visiting Us 👋</h2>
+                </div>
+                <div class="mx-auto">
+                    <a class="btn btn-blue btn-lg" href="/gallery.html">full-gallery</a>
+                </div>
+                <div class="mx-auto">
+                    <a class="contact btn btn-blue btn-lg" href="/contact-us.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- End Thanks Section -->
+
+     <!-- Start Footer Section -->
+     <footer class="footer ">
+        <div class="container d-flex ">
+            <div class="left col-md-4 mt-2">
+                <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#">
+                <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest fa-lg"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-reddit fa-lg"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-behance fa-lg"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-dribbble fa-lg"></i>
+                </a>
+            </div>
+            <div class="col-md-4 copyright col-sm-8">
+                <h5>Copyright © 2020 Designed By <a href="https://bit.ly/2J07rHO" target="_blank">Mohamed Hema</a></h5>
+            </div>
+            <div class="right col-md-4 mt-2 col-sm-4">
+                <ul class="footer-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/about.html" target="_blank">About</a></li>
+                    <li><a href="/gallery.html" target="_blank">Gallery</a></li>
+                    <li><a href="/contact-us.html" target="_blank">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- End Footer Section -->
+
+    
     <!-- Start Scroll to top Section -->
     <!-- <a id="back-to-top" href="#" class="btn btn-blue btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a> -->
 
