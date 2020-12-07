@@ -4,15 +4,13 @@ body{
     background-color: var(--light-blue);
 }
 
-
 /* End Global Styles */
 /* Start Navbar */
 .header{
     background-color: var(--white);
     color: var(--black);
     position: fixed;
-    border-bottom: 1px solid var(--gray);
-    
+    border-bottom: 1px solid var(--gray); 
 }
 
 .hamburger-menu{
@@ -27,20 +25,16 @@ body{
 
 /* Start Gallery */
 
-img{
+.gallery img{
     width: 100%;
     height: auto;
     display: block;
 }
-/* .container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-    margin-top: 5rem;
-} */
+
 .gallery .container{
-    margin-top: 5rem;
-}
+    padding-top: 5rem;
+
+} 
 
 .img-container{
     overflow: hidden;

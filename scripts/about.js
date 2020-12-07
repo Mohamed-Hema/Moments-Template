@@ -1,4 +1,4 @@
-// Loading Screen
+// // Loading Screen
 let loading = document.querySelector('.wrap-loader');
 let body = document.getElementsByTagName('body')[0];
 body.style.overflowY = "hidden";
