@@ -24,12 +24,25 @@
     --box-border: #fff;
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
-  }
+  } */
 body{
     font-family: var(--main-font);
-    overflow-x: hidden;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+@media screen and (max-width: 840px) {
+    html{
+        overflow-x:hidden;  
+    }
 }
 
 *:hover{
@@ -57,13 +70,16 @@ ul{
     text-decoration: underline;
     color: var(--secondary-dark-blue);
 }
+
 /* End Global Styles */
 /* Start Loading Screen */
 
 .wrap-loader {
-    position: relative;
+    position: fixed;
     z-index: 9999;
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -338,6 +354,10 @@ ul{
 }
 .hamburger-menu .fa-times{
     display: none;
+}
+.hamburger-menu .fa-times:hover,
+.hamburger-menu .fa-bars:hover{
+    color: var(--secondary-dark-blue);
 }
 .menu-open .hamburger-menu .fa-times{
     display: block;
@@ -788,8 +808,6 @@ ul{
 
 .second-carousel {
 	width: 100%;
-    height: 100vh;
-    
 }
 .second-carousel .carousel-inner{
     box-shadow: 0 0 1rem #000;
@@ -810,14 +828,22 @@ ul{
 /* Start Testimonials Section */
 .testimonials{
     height: 100vh;
-    padding-top: 15rem;
+    width: 100%;
     background-color:#6AAED9;
     color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+
 }
+
+
 .testimonials #demo {
     background: linear-gradient(112deg, #fff 50%, rgba(187,221,242,1) 50%);
     max-width: 56rem;
     margin: auto;
+
     border-radius: 2rem 0 2rem 0;
     box-shadow: 0 0 10px rgba(17,93,140,1);
     height: 30rem;
@@ -843,26 +869,38 @@ ul{
         padding: 3rem 2rem;
         color: rgba(78, 77, 77, 0.856);
         text-align: center;
-        font-size: 0.7rem;
+        font-size: 1rem;
         font-style: italic;
         font-weight: bold;
         line-height: 1.5rem
     }
+    .testimonials #name {
+        font-style: normal;
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+    }
+    .testimonials i {
+        padding: 0.8rem
+    }
+    .testimonials #demo {
+        max-width: 56rem;
+        height: 20rem;
+    }
+    .testimonials .carousel-inner{
+        padding-bottom: 3rem;
+    }
+    .testimonials .fas {
+        background-color: transparent;
+        color: var(--dark-blue);
+        font-size: 1rem;
+    }
+    
 }
 
-
-.testimonials #image-caption {
+.testimonials #name {
     font-style: normal;
     font-size: 1rem;
     margin-top: 0.5rem
-}
-
-@media(max-width:767px) {
-    .testimonials #image-caption {
-        font-style: normal;
-        font-size: 0.6rem;
-        margin-top: 0.5rem
-    }
 }
 
 .testimonials i {
@@ -870,11 +908,6 @@ ul{
     padding: 1.4rem;
 }
 
-@media(max-width:767px) {
-    .testimonials i {
-        padding: 0.8rem
-    }
-}
 
 .testimonials .carousel-control-prev {
     justify-content: flex-start
@@ -902,12 +935,33 @@ ul{
 
 .thanks .row{
     position: absolute;
-    top: 45%;
-    left: 28%;
+    padding: 25% 0 0 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
+}
+@media screen and (max-width: 1000px) {
+    .thanks{
+        height: 100vh;
+        background: url(../images/footer-img.jpg) no-repeat;
+        position: relative;
+        background-size: 100% 100%;
+     
+    }
+    .thanks .row{
+        padding: 25% 0 0 5%;
+    }
+}
+@media screen and (max-width: 750px){
+    .thanks .row{
+        padding: 35% 0 0 0;
+    }
+}
+@media screen and (max-width:500px){
+    .thanks h2{
+        margin-top: 10rem;
+    }
 }
 .thanks .overlay{
     position: absolute;

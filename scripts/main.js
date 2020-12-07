@@ -1,10 +1,9 @@
 //Selectors
 const header = document.querySelector('.header');
 const menu = document.querySelector('.hamburger-menu');
+// Loading Screen
 let loading = document.querySelector('.wrap-loader');
 let body = document.getElementsByTagName('body')[0];
-
-// Loading Screen
 body.style.overflowY = "hidden";
 window.addEventListener('load', function () {
   loading.style.display ='none';
